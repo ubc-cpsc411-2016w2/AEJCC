@@ -1,8 +1,6 @@
 ## Example JavaCC parser for AE
 
-This repository contains a simple JavaCC-based parser for parsing the
-arithmetic expressions language discussed in class. For compactness of code, it
-does not use a visitor pattern.
+This repository augments our OO-style Arithmetic Expressions (AE) interpreter with a simple JavaCC-based parser.
 
 ## Suggested exercises
 

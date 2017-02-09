@@ -1,3 +1,12 @@
+/**
+ * JavaCC file
+ */
+
+options {
+  JDK_VERSION = "1.8";
+  STATIC = false; /* Make a REAL OO Parser. Default is true, which creates a hacky static parser */
+}
+
 PARSER_BEGIN(AEParser)
 
 package ca.ubc.cs411.aejcc.parser;

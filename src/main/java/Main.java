@@ -2,7 +2,7 @@ import ca.ubc.cs411.aejcc.parser.AEParser;
 import ca.ubc.cs411.aejcc.parser.ParseException;
 import ca.ubc.cs411.aejcc.ast.AE;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         AEParser aep = new AEParser(System.in);
 

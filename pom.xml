@@ -55,7 +55,7 @@
 				  <archive>
 					<manifest>
 						<!-- Jar file entry point -->
-						<mainClass>Main</mainClass>
+						<mainClass>ca.ubc.cs411.aejcc.Main</mainClass>
 					</manifest>
 				  </archive>
 				</configuration>

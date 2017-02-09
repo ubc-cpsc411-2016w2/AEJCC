@@ -1,3 +1,5 @@
+package ca.ubc.cs411.aejcc;
+
 import ca.ubc.cs411.aejcc.parser.AEParser;
 import ca.ubc.cs411.aejcc.parser.ParseException;
 import ca.ubc.cs411.aejcc.ast.AE;

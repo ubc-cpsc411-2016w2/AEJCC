@@ -33,8 +33,8 @@ TOKEN:
 | <NUM: (["0"-"9"])+>
 }
 
-/** Root production. */
-AE Root():
+/* Expects exactly ONE Expression, then end of file. */
+AE OneExpression():
 {
     AE result;
 }
@@ -42,6 +42,16 @@ AE Root():
     result = Expression() <EOF> { return result; }
 }
 
+AE REPLCmd():
+{
+    AE a;
+}
+{ a=Expression() { return a; }
+  | "exit" { return null; }
+}
+
+
+/* Upon successfully parsing an expression, returns it, leaving the rest of the input stream available */
 AE Expression():
 {
     Token t;

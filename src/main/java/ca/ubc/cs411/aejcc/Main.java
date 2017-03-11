@@ -3,6 +3,7 @@ package ca.ubc.cs411.aejcc;
 import ca.ubc.cs411.aejcc.parser.AEParser;
 import ca.ubc.cs411.aejcc.parser.ParseException;
 import ca.ubc.cs411.aejcc.ast.AE;
+import ca.ubc.cs411.aejcc.parser.TokenMgrError;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,10 +22,10 @@ public class Main {
                 }
             } while(result != null);
         }
-        catch(Exception e) {
+        catch(ParseException e) {
             System.out.println("exception: " + e);
         }
-        catch(Error e) {
+        catch(TokenMgrError e) {
             System.out.println("error: " + e);
         }
         System.out.println("Goodbye!");

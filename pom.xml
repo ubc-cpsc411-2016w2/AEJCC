@@ -29,8 +29,9 @@
                 <artifactId>javacc-maven-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <sourceDirectory>src/main/java/ca/ubc/cs411/aejcc/parser</sourceDirectory>
-                    <outputDirectory>src/main/java/ca/ubc/cs411/aejcc/parser</outputDirectory>
+                  <sourceDirectory>
+		    src/main/java/ca/ubc/cs411/aejcc/parser
+		  </sourceDirectory>
                 </configuration>
                 <executions>
                     <execution>

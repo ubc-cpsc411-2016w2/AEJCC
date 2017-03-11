@@ -12,6 +12,6 @@ public class Sub extends AE {
     }
 
     public String toString() {
-        return "{Sub " + lhs + ", " + rhs + "}";
+        return "new Sub(" + lhs + ", " + rhs + ")";
     }
 }

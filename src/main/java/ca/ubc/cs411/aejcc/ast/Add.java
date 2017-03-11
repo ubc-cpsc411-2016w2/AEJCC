@@ -12,6 +12,6 @@ public class Add extends AE {
     }
 
     public String toString() {
-        return "{Add " + lhs + ", " + rhs + "}";
+        return "new Add(" + lhs + ", " + rhs + ")";
     }
 }

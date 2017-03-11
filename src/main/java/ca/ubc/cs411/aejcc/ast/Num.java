@@ -6,7 +6,5 @@ public class Num extends AE {
 
     public int interp() { return n; }
 
-    public String toString() {
-        return "{Num: " + n + "}";
-    }
+    public String toString() { return "new Num(" + n + ")"; }
 }

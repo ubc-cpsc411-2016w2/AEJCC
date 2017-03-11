@@ -7,6 +7,9 @@ public class Add extends AE {
         this.rhs = rhs;
     }
 
+    @Override
+    public String prettyPrint() { return "(+ " + lhs.prettyPrint() + " " + rhs.prettyPrint() + ")"; }
+
     public int interp() {
         return lhs.interp() + rhs.interp();
     }

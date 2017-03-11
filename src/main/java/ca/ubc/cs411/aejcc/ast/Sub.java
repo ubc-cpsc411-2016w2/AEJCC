@@ -7,6 +7,8 @@ public class Sub extends AE {
         this.rhs = rhs;
     }
 
+    public String prettyPrint() { return "(- " + lhs.prettyPrint() + " " + rhs.prettyPrint() + ")"; }
+
     public int interp() {
         return lhs.interp() - rhs.interp();
     }

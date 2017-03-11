@@ -18,6 +18,7 @@ public class Main {
                 result = aep.REPLCmd();
                 if (result != null) {
                     System.out.println("AST: " + result);
+                    System.out.println("Pretty Print: " + result.prettyPrint());
                     System.out.println("Interp: " + result.interp());
                 }
             } while(result != null);

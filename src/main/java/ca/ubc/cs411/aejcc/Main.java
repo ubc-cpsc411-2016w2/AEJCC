@@ -11,24 +11,29 @@ public class Main {
 
         AEParser aep = new AEParser(System.in);
 
-        try {
-            AE result;
-            do {
+        boolean done = false;
+        do {
+            try {
                 System.out.print("> ");
-                result = aep.REPLCmd();
+                AE result = aep.REPLCmd();
                 if (result != null) {
                     System.out.println("AST: " + result);
                     System.out.println("Pretty Print: " + result.prettyPrint());
                     System.out.println("Interp: " + result.interp());
+                } else {
+                    done = true;
                 }
-            } while(result != null);
-        }
-        catch(ParseException e) {
-            System.out.println("exception: " + e);
-        }
-        catch(TokenMgrError e) {
-            System.out.println("error: " + e);
-        }
+            } catch (ParseException e) {
+                System.out.println("exception: " + e);
+                aep.ReInit(System.in); // try again
+            }  catch(TokenMgrError e) {
+                System.out.println("error: " + e);
+                aep.ReInit(System.in); // try again
+            }
+            // This would throw away  the rest of an input line after a legal parse
+            // aep.ReInit(System.in);
+        } while(!done);
+
         System.out.println("Goodbye!");
     }
 }
